@@ -17,6 +17,7 @@ class OtherItemVC: NSViewController {
     @IBOutlet weak var otherItem_TabView: NSTabView!
     
     @IBOutlet weak var listitem_TextField: NSTextField!
+    @IBOutlet weak var subTitle_TextField: NSTextField!
     @IBOutlet weak var commandIcon_TextField: NSTextField!
     @IBOutlet weak var label_TextField: NSTextField!
     
@@ -43,6 +44,7 @@ class OtherItemVC: NSViewController {
         let commandDict = ["itemType": itemType,
                            "icon": icon,
                            "listitem": listitem_TextField.stringValue,
+                           "subtitle": subTitle_TextField.stringValue,
                            "progressText": commandOrProgressText_TextField.stringValue,
                            "theBinary": theBinary,
                            "command":command_TextField.stringValue,

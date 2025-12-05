@@ -1264,7 +1264,7 @@ class ViewController: NSViewController, NSTextFieldDelegate, URLSessionDelegate,
             selectedPoliciesArray.append(Policy(name: theName, id: "\(theId)", configs: [configuration_Button.titleOfSelectedItem!], grouped: false, groupId: ""))
             selectedPoliciesDict[configuration_Button.titleOfSelectedItem!] = selectedPoliciesArray
             
-            configsDict[configuration_Button.titleOfSelectedItem!]![theId] = ["listitem": newItem["listitem"]!, "subtitle": "", "id": theId, "icon": newItem["icon"]!, "progresstext": newItem["progressText"]!, "trigger": newItem["trigger"]!, "validation": "Local", "command": "", "arguments": "", "objectType": "Local Validation", "timeout": "", "grouped": "false", "groupId": ""]
+            configsDict[configuration_Button.titleOfSelectedItem!]![theId] = ["listitem": newItem["listitem"] ?? "", "subtitle": newItem["subtitle"] ?? "", "id": theId, "icon": newItem["icon"] ?? "", "progresstext": newItem["progressText"] ?? "", "trigger": newItem["trigger"] ?? "", "validation": "Local", "command": "", "arguments": "", "objectType": "Local Validation", "timeout": "", "grouped": "false", "groupId": ""]
             
             enrollmentActions.append(EnrollmentActions(name: theName, id: theId, icon: newItem["icon"]!, listitem: theName, subtitle: "", progressText: theName, trigger: "", command: "", arguments: [], objectType: "Local Validation", timeout: ""))
 
