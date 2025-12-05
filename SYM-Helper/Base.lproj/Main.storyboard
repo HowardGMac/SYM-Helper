@@ -2116,7 +2116,7 @@ DQ
                                                     <rect key="frame" x="4" y="-2" width="688" height="322"/>
                                                     <clipView key="contentView" drawsBackground="NO" id="zoq-bL-5tw">
                                                         <rect key="frame" x="0.0" y="0.0" width="688" height="322"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <textView identifier="buildings" wantsLayer="YES" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="28C-7p-jXE">
                                                                 <rect key="frame" x="0.0" y="0.0" width="688" height="322"/>

@@ -826,7 +826,8 @@ class ViewController: NSViewController, NSTextFieldDelegate, URLSessionDelegate,
         // fix - don't save until we've hit all configs
         let saveDialog = NSSavePanel()
         saveDialog.canCreateDirectories = true
-        saveDialog.nameFieldStringValue = exportTitle
+        print("[processPolicies] exportTitle: \(exportTitle)")
+        saveDialog.nameFieldStringValue = exportTitle.replacingOccurrences(of: ".bash", with: "-\(getCurrentTime(formatFor: "title")).bash")
         saveDialog.beginSheetModal(for: self.view.window!){ result in
             if result == .OK {
                 let scriptName = saveDialog.nameFieldStringValue

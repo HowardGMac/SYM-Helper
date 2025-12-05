@@ -197,7 +197,7 @@ func timeDiff(forWhat: String) -> (Int,Int,Int) {
  */
 
 // get current time
-func getCurrentTime() -> String {
+func getCurrentTime(formatFor: String = "log") -> String {
     let current = Date()
     let localCalendar = Calendar.current
     let dateObjects: Set<Calendar.Component> = [.year, .month, .day, .hour, .minute, .second]
@@ -207,8 +207,10 @@ func getCurrentTime() -> String {
     let currentHour   = leadingZero(value: dateTime.hour!)
     let currentMinute = leadingZero(value: dateTime.minute!)
     let currentSecond = leadingZero(value: dateTime.second!)
-    let stringDate = "\(dateTime.year!)\(currentMonth)\(currentDay)_\(currentHour)\(currentMinute)\(currentSecond)"
-    return stringDate
+    if formatFor == "log" {
+        return "\(dateTime.year!)\(currentMonth)\(currentDay)_\(currentHour)\(currentMinute)\(currentSecond)"
+    }
+    return "\(dateTime.year!)-\(currentMonth)-\(currentDay)_\(currentHour)\(currentMinute)\(currentSecond)"
 }
 // add leading zero to single digit integers
 func leadingZero(value: Int) -> String {
